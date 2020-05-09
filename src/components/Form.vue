@@ -120,7 +120,7 @@
                     <v-btn  large color="primary" >Prediction</v-btn>
                 </div>
             </v-col>
-            <Result v-show="true"></Result>
+            <Result v-show="false"></Result>
         </div>
     </v-app>
 </template>
@@ -129,6 +129,7 @@
     import Result from "./Result";
     export default {
         name: "Form",
+        components: {Result},
         data: () => ({
             valid: false,
             firstname: '',
