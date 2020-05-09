@@ -1,25 +1,23 @@
 <template>
-  <div id="app">
-      <Header></Header>
-      <Form></Form>
-      <Footer></Footer>
+  <div>
+    <Header></Header>
+    <Form></Form>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-
-import Header from "./components/Header";
-import Form from "./components/Form";
-import Footer from "./components/Footer";
-export default {
-  name: 'App',
-  components: {
-    Footer,
-    Form,
-    Header
-
+  import Header from "./components/Header";
+  import Form from "./components/Form";
+  import Footer from "./components/Footer";
+  export default {
+    name: 'App',
+    components: {
+      Footer,
+      Form,
+      Header
+    }
   }
-}
 </script>
 
 <style>
@@ -30,9 +28,8 @@ export default {
     text-align: center;
     color: #2c3e50;
     background-image: url("./assets/image2.jpg");
-    padding: 60px;
     background-color: #cccccc;
-    height: 100vh;
+    min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

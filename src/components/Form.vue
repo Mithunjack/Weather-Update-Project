@@ -1,75 +1,147 @@
 <template>
-    <div class="form-component">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >@</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+    <v-app>
+        <div class="form-component">
+            <v-form v-model="valid" >
+                <v-container>
+                    <v-row>
+                        <v-col
+                                cols="12"
+                                md="6"
+                        >
+                            <v-text-field
+                                    v-model="firstname"
+                                    :rules="nameRules"
+                                    :counter="10"
+                                    label="First name"
+                                    required
+                            ></v-text-field>
+                        </v-col>
+
+                        <v-col
+                                cols="12"
+                                md="6"
+                        >
+                            <v-text-field
+                                    v-model="lastname"
+                                    :rules="nameRules"
+                                    :counter="10"
+                                    label="Last name"
+                                    required
+                            ></v-text-field>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col
+                                cols="12"
+                                md="6"
+                        >
+                            <v-text-field
+                                    v-model="firstname"
+                                    :rules="nameRules"
+                                    :counter="10"
+                                    label="First name"
+                                    required
+                            ></v-text-field>
+                        </v-col>
+
+                        <v-col
+                                cols="12"
+                                md="6"
+                        >
+                            <v-text-field
+                                    v-model="lastname"
+                                    :rules="nameRules"
+                                    :counter="10"
+                                    label="Last name"
+                                    required
+                            ></v-text-field>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col
+                                cols="12"
+                                md="6"
+                        >
+                            <v-text-field
+                                    v-model="firstname"
+                                    :rules="nameRules"
+                                    :counter="10"
+                                    label="First name"
+                                    required
+                            ></v-text-field>
+                        </v-col>
+
+                        <v-col
+                                cols="12"
+                                md="6"
+                        >
+                            <v-text-field
+                                    v-model="lastname"
+                                    :rules="nameRules"
+                                    :counter="10"
+                                    label="Last name"
+                                    required
+                            ></v-text-field>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col
+                                cols="12"
+                                md="6"
+                        >
+                            <v-text-field
+                                    v-model="firstname"
+                                    :rules="nameRules"
+                                    :counter="10"
+                                    label="First name"
+                                    required
+                            ></v-text-field>
+                        </v-col>
+
+                        <v-col
+                                cols="12"
+                                md="6"
+                        >
+                            <v-text-field
+                                    v-model="lastname"
+                                    :rules="nameRules"
+                                    :counter="10"
+                                    label="Last name"
+                                    required
+                            ></v-text-field>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-form>
+            <v-col class="text-center">
+                <div class="my-2 pink--text">
+                    <v-btn  large color="primary" >Prediction</v-btn>
                 </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >@</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >@</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >@</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >@</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >@</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >@</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" >@</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-            </div>
+            </v-col>
+            <Result v-show="true"></Result>
         </div>
-        <div class=" mb-3">
-            <button type="button" class="btn btn-primary custom-botton">Prediction</button>
-        </div>
-        <div class="card text-white bg-info mt-3 mb-3 m-a" style="max-width: 18rem;" v-show="true">
-            <div class="card-header">Result</div>
-            <div class="card-body">
-                <h5 class="card-title">Info card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-    </div>
+    </v-app>
 </template>
 
 <script>
+    import Result from "./Result";
     export default {
-        name: "Form"
+        name: "Form",
+        components: {Result},
+        data: () => ({
+            valid: false,
+            firstname: '',
+            lastname: '',
+            nameRules: [
+                v => !!v || 'Name is required',
+                v => v.length <= 10 || 'Name must be less than 10 characters',
+            ],
+            email: '',
+            emailRules: [
+                v => !!v || 'E-mail is required',
+                v => /.+@.+/.test(v) || 'E-mail must be valid',
+            ],
+        }),
     }
 </script>
 
@@ -78,7 +150,7 @@
         width: 700px;
         margin: auto;
         padding: 60px 30px;
-        background: #1c177d;
+        background: #fcfffa;
         border-radius: 5px;
     }
     .form-component .input-group{
