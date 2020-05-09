@@ -1,7 +1,8 @@
 <template>
-    <div class="form-component">
-        <div class="row">
-            <v-form v-model="valid" class="form-custom">
+
+    <v-app>
+        <div class="form-component">
+            <v-form v-model="valid" >
                 <v-container>
                     <v-row>
                         <v-col
@@ -113,25 +114,19 @@
                     </v-row>
                 </v-container>
             </v-form>
-        </div>
-        <v-row align="center">
-            <v-col class="text-center" cols="12" sm="4">
-                <div class="my-2">
-                    <v-btn large color="primary">Primary</v-btn>
+
+            <v-col class="text-center">
+                <div class="my-2 pink--text">
+                    <v-btn  large color="primary" >Prediction</v-btn>
                 </div>
             </v-col>
-        </v-row>
-        <div class="card text-white bg-info mt-3 mb-3 m-a" style="max-width: 18rem;" v-show="false">
-            <div class="card-header">Result</div>
-            <div class="card-body">
-                <h5 class="card-title">Info card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
+            <Result v-show="true"></Result>
         </div>
-    </div>
+    </v-app>
 </template>
 
 <script>
+    import Result from "./Result";
     export default {
         name: "Form",
         data: () => ({
@@ -156,7 +151,8 @@
         width: 700px;
         margin: auto;
         padding: 60px 30px;
-        background: #edeaf1;
+
+        background: #fcfffa;
         border-radius: 5px;
     }
     .form-component .form-custom{

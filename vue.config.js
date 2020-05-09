@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< HEAD
     configureWebpack: {
         module : {
             rules: [
@@ -23,4 +24,9 @@ module.exports = {
             ]
         }
     }
+=======
+  "transpileDependencies": [
+    "vuetify"
+  ]
+>>>>>>> f784d00
 }
