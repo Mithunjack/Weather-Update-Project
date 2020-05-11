@@ -1,5 +1,4 @@
 <template>
-
     <v-app>
         <div class="form-component">
             <v-form v-model="valid" >
@@ -158,15 +157,5 @@
     }
     .form-component .form-custom{
         width: 100%;
-    }
-    .m-a{
-        margin: auto;
-    }
-    .custom-botton{
-        padding: 15px;
-        width: 190px;
-        font-size: 20px;
-        font-style: italic;
-        font-weight: 700;
     }
 </style>
