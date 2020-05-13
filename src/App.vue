@@ -10,6 +10,7 @@
   import Header from "./components/Header";
   import Form from "./components/Form";
   import Footer from "./components/Footer";
+  /*import axios from "axios";*/
   export default {
     name: 'App',
     components: {

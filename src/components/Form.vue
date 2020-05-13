@@ -12,7 +12,7 @@
                                     v-model="firstname"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="First name"
+                                    label="Dry Bulb Temp"
                                     required
                             ></v-text-field>
                         </v-col>
@@ -25,7 +25,7 @@
                                     v-model="lastname"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="Last name"
+                                    label="Dry Bulb Temp"
                                     required
                             ></v-text-field>
                         </v-col>
@@ -39,7 +39,7 @@
                                     v-model="firstname"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="First name"
+                                    label="Weight Bulb Temp"
                                     required
                             ></v-text-field>
                         </v-col>
@@ -52,7 +52,7 @@
                                     v-model="lastname"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="Last name"
+                                    label="Weight Bulb Temp"
                                     required
                             ></v-text-field>
                         </v-col>
@@ -66,7 +66,7 @@
                                     v-model="firstname"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="First name"
+                                    label="Relative Humidity"
                                     required
                             ></v-text-field>
                         </v-col>
@@ -79,7 +79,7 @@
                                     v-model="lastname"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="Last name"
+                                    label="Relative Humidity"
                                     required
                             ></v-text-field>
                         </v-col>
@@ -93,7 +93,7 @@
                                     v-model="firstname"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="First name"
+                                    label="Pressure"
                                     required
                             ></v-text-field>
                         </v-col>
@@ -106,7 +106,7 @@
                                     v-model="lastname"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="Last name"
+                                    label="Pressure"
                                     required
                             ></v-text-field>
                         </v-col>
