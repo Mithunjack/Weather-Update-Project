@@ -9,7 +9,7 @@
                                 md="6"
                         >
                             <v-text-field
-                                    v-model="firstname"
+                                    v-model="dbt_1"
                                     :rules="nameRules"
                                     :counter="10"
                                     label="Dry Bulb Temp"
@@ -22,7 +22,7 @@
                                 md="6"
                         >
                             <v-text-field
-                                    v-model="lastname"
+                                    v-model="dbt_2"
                                     :rules="nameRules"
                                     :counter="10"
                                     label="Dry Bulb Temp"
@@ -36,7 +36,7 @@
                                 md="6"
                         >
                             <v-text-field
-                                    v-model="firstname"
+                                    v-model="wbt_1"
                                     :rules="nameRules"
                                     :counter="10"
                                     label="Weight Bulb Temp"
@@ -49,7 +49,7 @@
                                 md="6"
                         >
                             <v-text-field
-                                    v-model="lastname"
+                                    v-model="wbt_2"
                                     :rules="nameRules"
                                     :counter="10"
                                     label="Weight Bulb Temp"
@@ -63,7 +63,7 @@
                                 md="6"
                         >
                             <v-text-field
-                                    v-model="firstname"
+                                    v-model="rh_1"
                                     :rules="nameRules"
                                     :counter="10"
                                     label="Relative Humidity"
@@ -76,7 +76,7 @@
                                 md="6"
                         >
                             <v-text-field
-                                    v-model="lastname"
+                                    v-model="rh_2"
                                     :rules="nameRules"
                                     :counter="10"
                                     label="Relative Humidity"
@@ -90,7 +90,7 @@
                                 md="6"
                         >
                             <v-text-field
-                                    v-model="firstname"
+                                    v-model="pre_1"
                                     :rules="nameRules"
                                     :counter="10"
                                     label="Pressure"
@@ -103,7 +103,7 @@
                                 md="6"
                         >
                             <v-text-field
-                                    v-model="lastname"
+                                    v-model="pre_2"
                                     :rules="nameRules"
                                     :counter="10"
                                     label="Pressure"
@@ -112,13 +112,14 @@
                         </v-col>
                     </v-row>
                 </v-container>
+                <v-col class="text-center">
+                    <div class="my-2 pink--text">
+                        <v-btn  large color="primary" >Prediction</v-btn>
+                    </div>
+                </v-col>
             </v-form>
 
-            <v-col class="text-center">
-                <div class="my-2 pink--text">
-                    <v-btn  large color="primary" >Prediction</v-btn>
-                </div>
-            </v-col>
+
             <Result v-show="false"></Result>
         </div>
     </v-app>
@@ -131,16 +132,17 @@
         components: {Result},
         data: () => ({
             valid: false,
-            firstname: '',
-            lastname: '',
+            dbt_1: '',
+            dbt_2: '',
+            wbt_1: '',
+            wbt_2: '',
+            rh_1: '',
+            rh_2: '',
+            pre_1: '',
+            pre_2: '',
             nameRules: [
-                v => !!v || 'Name is required',
-                v => v.length <= 10 || 'Name must be less than 10 characters',
-            ],
-            email: '',
-            emailRules: [
-                v => !!v || 'E-mail is required',
-                v => /.+@.+/.test(v) || 'E-mail must be valid',
+                v => !!v || 'Field is required',
+                v => v.length <= 5 || 'Field must be less than 5 characters',
             ],
         }),
     }
@@ -151,7 +153,6 @@
         width: 700px;
         margin: auto;
         padding: 60px 30px;
-
         background: #fcfffa;
         border-radius: 5px;
     }
