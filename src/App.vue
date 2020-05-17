@@ -26,10 +26,10 @@
     methods: {
       onClickPrediction(value){
         console.log("form paise: " + value.time.time);
-        /*axios.post('#',value)
-                .then(res => this.todos = [...this.todos , res.data])
+/*        axios.post('http://localhost:5000/prediction',value)
+                .then(res => res.prediction == 1 ? this.show = true : this.show = false)
                 .catch(err => console.log(err));*/
-        this.show = true;
+          this.show = true;
       }
     }
   }

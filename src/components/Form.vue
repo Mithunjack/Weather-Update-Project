@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <div class="form-component">
-            <p class="date-title">Today :<b class="date-format">{{date}}</b></p>
+            <p class="date-title">Today : <b class="date-format">{{date}}</b></p>
             <v-form v-model="valid" @submit="postData" action="#">
                 <v-container>
                     <v-row>
