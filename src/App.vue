@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header></Header>
-    <Form></Form>
+    <Form @clicked="onClickPrediction" :response = "show"></Form>
     <Footer></Footer>
   </div>
 </template>
@@ -10,13 +10,27 @@
   import Header from "./components/Header";
   import Form from "./components/Form";
   import Footer from "./components/Footer";
-  /*import axios from "axios";*/
+  //import axios from "axios";
   export default {
     name: 'App',
     components: {
       Footer,
       Form,
       Header
+    },
+    data(){
+      return {
+        show : false,
+      }
+    },
+    methods: {
+      onClickPrediction(value){
+        console.log("form paise: " + value.time.time);
+        /*axios.post('#',value)
+                .then(res => this.todos = [...this.todos , res.data])
+                .catch(err => console.log(err));*/
+        this.show = true;
+      }
     }
   }
 </script>
