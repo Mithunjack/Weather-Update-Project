@@ -126,14 +126,14 @@
 
 <script>
     import Result from "./Result";
-    import { format ,getHours} from 'date-fns'
+    import { format ,getHours, getMonth, getDate} from 'date-fns'
     let postData = function (event){
         console.log(event);
         let data = {
             "time":{
-                "month":format(new Date(), 'MM'),
+                "month":getMonth(new Date(), 'MM'),
                 "time":getHours(new Date(), 'dd'),
-                "date":format(new Date(), 'dd')
+                "date":getDate(new Date(), 'dd')
             },
             "features":[
                 {
