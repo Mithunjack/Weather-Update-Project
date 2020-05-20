@@ -13,7 +13,7 @@
                                     v-model="dbt_1"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="Dry Bulb Temp"
+                                    label="Dry Bulb Temp(previous)"
                                     required
                             ></v-text-field>
                         </v-col>
@@ -40,7 +40,7 @@
                                     v-model="wbt_1"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="Weight Bulb Temp"
+                                    label="Wet Bulb Temp(previous)"
                                     required
                             ></v-text-field>
                         </v-col>
@@ -53,7 +53,7 @@
                                     v-model="wbt_2"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="Weight Bulb Temp"
+                                    label="Wet Bulb Temp"
                                     required
                             ></v-text-field>
                         </v-col>
@@ -67,7 +67,7 @@
                                     v-model="rh_1"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="Relative Humidity"
+                                    label="Relative Humidity(previous)"
                                     required
                             ></v-text-field>
                         </v-col>
@@ -94,7 +94,7 @@
                                     v-model="pre_1"
                                     :rules="nameRules"
                                     :counter="10"
-                                    label="Pressure"
+                                    label="Pressure(previous)"
                                     required
                             ></v-text-field>
                         </v-col>
@@ -137,16 +137,16 @@
             },
             "features":[
                 {
-                    "dew_temp":[this.dbt_1,this.dbt_2]
+                    "dew_temp":[Number(this.dbt_1),Number(this.dbt_2)]
                 },
                 {
-                    "dry_temp":[this.wbt_1,this.wbt_2]
+                    "dry_temp":[Number(this.wbt_1),Number(this.wbt_2)]
                 },
                 {
-                    "relative_humidity":[this.rh_1,this.rh_2]
+                    "relative_humidity":[Number(this.rh_1),Number(this.rh_2)]
                 },
                 {
-                    "pressure":[this.pre_1,this.pre_2]
+                    "pressure":[Number(this.pre_1),Number(this.pre_2)]
                 }
             ]
         };
