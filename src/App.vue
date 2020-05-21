@@ -10,7 +10,7 @@
   import Header from "./components/Header";
   import Form from "./components/Form";
   import Footer from "./components/Footer";
-  //import axios from "axios";
+  import axios from "axios";
   export default {
     name: 'App',
     components: {
@@ -25,11 +25,14 @@
     },
     methods: {
       onClickPrediction(value){
+        var config = {
+            headers: {'Access-Control-Allow-Origin': '*'}
+        };
         console.log("form paise: " + value.time.time);
-/*        axios.post('http://localhost:5000/prediction',value)
-                .then(res => res.prediction == 1 ? this.show = true : this.show = false)
-                .catch(err => console.log(err));*/
-          this.show = true;
+       axios.post('http://127.0.0.1:5000/api/prediction/thunder',value, config)
+                .then(res => console.log(res))
+                .catch(err => console.log(err));
+          // this.show = true;
       }
     }
   }
