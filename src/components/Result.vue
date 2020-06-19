@@ -6,18 +6,6 @@
 
     <v-card-subtitle>For the next three hours</v-card-subtitle>
 
-    <v-card-actions>
-      <v-btn text>Share</v-btn>
-
-      <v-btn color="purple" text>Explore</v-btn>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon @click="res.ok = !res.ok">
-        <v-icon>{{ res.ok ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-      </v-btn>
-    </v-card-actions>
-
     <v-expand-transition>
       <div v-show="res.ok">
         <v-divider></v-divider>
