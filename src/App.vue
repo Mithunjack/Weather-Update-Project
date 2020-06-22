@@ -35,7 +35,7 @@ export default {
       var config = {
         headers: { "Access-Control-Allow-Origin": "*" }
       };
-      console.log("form paise: " + value.time.time);
+     // console.log("form paise: " + value.time.time);
       axios
         .post("http://0.0.0.0:5000/api/prediction/thunder", value, config)
         .then(res => {

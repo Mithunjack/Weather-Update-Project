@@ -12,7 +12,7 @@
               <v-text-field
                 v-model="dbt_1"
                 :rules="nameRules"
-                :counter="10"
+                :counter="5"
                 label="Dry Bulb Temp(previous)"
                 required
               ></v-text-field>
@@ -22,7 +22,7 @@
               <v-text-field
                 v-model="dbt_2"
                 :rules="nameRules"
-                :counter="10"
+                :counter="5"
                 label="Dry Bulb Temp"
                 required
               ></v-text-field>
@@ -33,7 +33,7 @@
               <v-text-field
                 v-model="wbt_1"
                 :rules="nameRules"
-                :counter="10"
+                :counter="5"
                 label="Wet Bulb Temp(previous)"
                 required
               ></v-text-field>
@@ -43,7 +43,7 @@
               <v-text-field
                 v-model="wbt_2"
                 :rules="nameRules"
-                :counter="10"
+                :counter="5"
                 label="Wet Bulb Temp"
                 required
               ></v-text-field>
@@ -54,7 +54,7 @@
               <v-text-field
                 v-model="rh_1"
                 :rules="nameRules"
-                :counter="10"
+                :counter="5"
                 label="Relative Humidity(previous)"
                 required
               ></v-text-field>
@@ -64,7 +64,7 @@
               <v-text-field
                 v-model="rh_2"
                 :rules="nameRules"
-                :counter="10"
+                :counter="5"
                 label="Relative Humidity"
                 required
               ></v-text-field>
@@ -75,7 +75,7 @@
               <v-text-field
                 v-model="pre_1"
                 :rules="nameRules"
-                :counter="10"
+                :counter="5"
                 label="Pressure(previous)"
                 required
               ></v-text-field>
@@ -85,7 +85,7 @@
               <v-text-field
                 v-model="pre_2"
                 :rules="nameRules"
-                :counter="10"
+                :counter="5"
                 label="Pressure"
                 required
               ></v-text-field>
@@ -174,11 +174,11 @@ export default {
   border-radius: 5px;
 }
 .form-component .form-custom {
-  width: 100%;
+  width: 50%;
 }
 .date-title {
   font-size: 30px;
-  margin-right: 10px;
+  margin-right: 5px;
   background-color: #1976d2;
   color: white;
   padding: 5px;
