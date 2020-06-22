@@ -37,7 +37,7 @@ export default {
       };
       console.log("form paise: " + value.time.time);
       axios
-        .post("http://127.0.0.1:5000/api/prediction/thunder", value, config)
+        .post("http://0.0.0.0:5000/api/prediction/thunder", value, config)
         .then(res => {
           if (res.status == 200) {
             this.show.data = res.data;
