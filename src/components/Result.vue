@@ -12,7 +12,7 @@
 
         <v-card-text
           v-if="res.data.prediction === 1"
-        >there is going to be a thunderstorm between {{res.data.start_time}} UTC and {{res.data.end_time}} UTC</v-card-text>
+        >there is going to be a thunderstorm between {{res.data.start_time}} LST and {{res.data.end_time}} LST</v-card-text>
         <v-card-text
           v-if="res.data.prediction === 0"
         >there wont be a thunderstorm between {{res.data.start_time}} LST and {{res.data.end_time}} LST</v-card-text>
