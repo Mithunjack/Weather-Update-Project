@@ -5,7 +5,7 @@
         Today :
         <b class="date-format">{{date}}</b>
       </p>
-      <v-form v-model="valid" @submit="postData" action="#">
+      <v-form v-model="valid" @submit="postData" action="#" ref="form">
         <v-container>
           <v-row>
             <v-col cols="12" md="6">
@@ -94,7 +94,7 @@
         </v-container>
         <v-col class="text-center">
           <div class="my-2 pink--text">
-            <v-btn type="submit" large color="primary" v-on:click="onClickPrediction">Prediction</v-btn>
+            <v-btn type="submit" large color="primary"  @click="validate" v-on:click="onClickPrediction">Prediction</v-btn>
           </div>
         </v-col>
       </v-form>
@@ -157,6 +157,10 @@ export default {
   }),
   methods: {
     postData,
+    validate () {
+      console.log('checking');
+      this.$refs.form.validate()
+    },
     onClickPrediction(e) {
       e.preventDefault();
       this.$emit("clicked", this.postData());
